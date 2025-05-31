@@ -169,7 +169,7 @@ public class UmmatProfilesWebPortlet extends MVCPortlet {
 	            Map<Long, MatriUser> userIdMap = matriUsers.stream()
 	                    .collect(Collectors.toMap(MatriUser::getUserId, Function.identity()));
 
-	            List<Long> excludedProfileIds = Arrays.asList(33847L, 33874L, 33880L, 40831L, 20099L, 20123L, 20127L, 112583L, 112610L, 112616L);
+	            List<Long> excludedProfileIds = Arrays.asList(20099L, 20123L, 20127L, 50305L, 50332L, 50338L, 55219L, 196671L);
 
 	            // Filtering Users
 	            List<User> filteredUsers = users.stream()
@@ -208,6 +208,8 @@ public class UmmatProfilesWebPortlet extends MVCPortlet {
 	                MatriUser matriUser = userIdMap.get(user.getUserId());
 	                if (matriUser != null) {
 	                    userJson.put("Jamath", matriUser.getJamath());
+	                    userJson.put("stateName", matriUser.getStateName());
+	                    userJson.put("districtName", matriUser.getDistrictName());
 	                }
 
 	                PortletURL informationRenderURL = PortletURLFactoryUtil.create(

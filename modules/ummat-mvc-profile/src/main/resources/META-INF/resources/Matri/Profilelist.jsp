@@ -44,14 +44,14 @@
   <div class="container">
     <div class="topsearchform">
       <div class="searhint">
-        <h3>Search Your Soul Mates</h3>
+            <h3>Search Your Soul Mates</h3>
         <div class="searchbox">
           <div class="row">
             <div class="col-lg-2 col-md-4">
               <div class="srchfld">
                 <label for="">I'm looking for</label>
                 <select id="genderSelect" class="form-control">
-                  <option>I'm looking for a</option>
+                  <option disabled selected>I'm looking for a</option>
 						<option value="all">All</option>
 						<option value="male">Male</option>
 						<option value="female">Female</option>
@@ -109,9 +109,9 @@
             </div>
             <div class="col-lg-2 col-md-4">
               <div class="srchfld">
-                <label for="">Select Profession</label>
+                <label for="">Select District</label>
                 <select name="district" id="selectedDistrict" class="form-control">
-               <option value="">Select District</option>
+               <option disabled selected>Select District</option>
 						<script>
 								$("#selectedDistrict").on("change",
 										selectedDistrict);
@@ -146,10 +146,9 @@
             
            <div class="col-lg-2 col-md-4">
               <div class="srchfld">
-                <label for="">Select Profession</label>
+                <label for="">Select Area</label>
                 <select name="area" id="availableLocality" class="form-control" onchange="selectArea(this)">
-                <option disabled selected>Selected Profession</option>
-						<option value="">Select Area</option>
+                <option disabled selected>Selected Area</option>
                 </select>
                
               </div>
@@ -176,7 +175,7 @@
             </div>
           </div>
         </div>
-        <div class="advsearch"><a href="advance-search.html"><i class="fas fa-search"></i> Advance Search</a></div>
+        <div class="advsearch"><a href="http://ummatnikkah.com/en/profiles"><i class="fas fa-search"></i> Advance Search</a></div>
       </div>
     </div>
   </div>
@@ -269,7 +268,9 @@ search logic css */
 h2.portlet-title-text.portlet-title-editable {
     display: none !important;
 } 
-
+  /* search letter ui */
+  
+		 /* =========== */
 
 </style>
 <aui:script>
@@ -291,7 +292,7 @@ AUI().use('aui-base', 'aui-io-request', function(A) {
     if (allChecked) { 
         selectedGenders = ['all']; 
     }
-    alert(selectedGenders);   
+    <!-- alert(selectedGenders);  -->  
     var genderhidden = document.getElementById("genderhidden"); 
     genderhidden.value = selectedGenders.join(',');  
     filterUsersByGender(); 
@@ -415,7 +416,7 @@ AUI().use('aui-base', 'aui-io-request', function(A) {
 		// var gen =Array.from(gender);
 //Array.from(str);
 		 var params = gender+'|'+jamadh+'|'+state+'|'+dist+'|'+area+'|'+profileid+'|'+languages+'|'+agefilters+'|'+profession;
-			alert(params);
+			<!-- alert(params); -->
         A.io.request(resourceURL, {
             dataType: 'json',
             method: 'GET',
@@ -437,7 +438,6 @@ AUI().use('aui-base', 'aui-io-request', function(A) {
             '<div class="name">' + user.fullName + '</div>' + 
             '<ul>' + 
                 '<li>' + user.Jamath + '</li>' + 
-                '<li>' + user.age + '</li>' +  // You must calculate age and include it in the user object
                 '<li>' + user.jobTitle + '</li>' + 
                 '<li>' + user.stateName + ', ' + user.districtName + '</li>' + 
             '</ul>' + 
@@ -475,6 +475,8 @@ function FilterBar() {
 	filterBar.classList.toggle('active');    
 
 }
+
+/*----Search letter UI script-------*/
 
 </script>
 
