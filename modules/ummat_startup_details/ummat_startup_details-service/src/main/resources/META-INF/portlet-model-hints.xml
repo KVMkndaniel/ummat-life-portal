@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="ummat_startup_details.model.MatriUser">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="userId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="education" type="String" />
+		<field name="countryid" type="long" />
+		<field name="countryName" type="String" />
+		<field name="stateid" type="long" />
+		<field name="stateName" type="String" />
+		<field name="districtid" type="long" />
+		<field name="districtName" type="String" />
+		<field name="area" type="String" />
+		<field name="jamath" type="String" />
+		<field name="maritalStatus" type="String" />
+		<field name="height" type="Double" />
+		<field name="weight" type="double" />
+		<field name="ConvertMuslim" type="String" />
+		<field name="primaryId" type="String" />
+		<field name="imageId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="color" type="String" />
+		<field name="bio" type="String" />
+		<field name="malechild" type="String" />
+		<field name="femalechild" type="String" />
+		<field name="MothertongueLanguage" type="String" />
+		<field name="LivingPlace" type="String" />
+		<field name="Monthlyincome" type="double" />
+	</model>
+</model-hints>

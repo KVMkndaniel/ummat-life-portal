@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="ummat_startup_details">
+	<namespace>TNUMMAT</namespace>
+	
+	
+	<entity local-service="true" name="MatriUser" remote-service="true" uuid="true">
+		<column name="id" primary="true" type="long"/>
+		<column name="userId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="education" type="String" />
+		<column name="countryid" type="long" />
+		<column name="countryName" type="String" />
+		<column name="stateid" type="long" />
+		<column name="stateName" type="String" />
+		<column name="districtid" type="long" />
+		<column name="districtName" type="String" />
+		<column name="area" type="String" />
+		<column name="jamath" type="String" />
+		<column name="maritalStatus" type="String" />
+		<column name="height" type="Double" />
+		<column name="weight" type="double" />
+		<column name="ConvertMuslim" type="String" />
+		<column name="primaryId" type="String" />
+		<column name="imageId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="color" type="String" ></column>
+        <column name="bio" type="String"></column>
+        <column name="malechild" type="String"></column>
+        <column name="femalechild" type="String"></column>
+         <column name="MothertongueLanguage" type="String"></column>
+          <column name="LivingPlace" type="String"></column>
+		  <column name="Monthlyincome" type="double"></column>
+		  
+		<finder return-type="MatriUser" name="Find_matrimonyUsers">
+		<finder-column name="userId"></finder-column>
+		<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="findByArea" return-type="Collection">
+			<finder-column name="area" />
+		</finder>
+		<finder name="findByDistrict" return-type="Collection">
+			<finder-column name="districtName" />
+		</finder>
+		<finder name="findByDistricAndAreat" return-type="Collection">
+			<finder-column name="districtName" />
+			<finder-column name="area" />
+		</finder>
+		
+	</entity>
+	
+	
+</service-builder>

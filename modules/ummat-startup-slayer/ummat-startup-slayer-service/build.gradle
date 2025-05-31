@@ -1,0 +1,12 @@
+dependencies {
+	api project(":modules:ummat-startup-slayer:ummat-startup-slayer-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../ummat-startup-slayer-api/src/main/java"
+	testDir = "../ummat-startup-slayer-test/src/testIntegration/java"
+}
+
+group = "com.ummat.slayer"

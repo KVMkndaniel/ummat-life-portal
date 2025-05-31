@@ -1,0 +1,4 @@
+Bundle-Name: ummat-matri-advanced-search
+Bundle-SymbolicName: com.ummat.advanced.search
+Bundle-Version: 1.0.0
+Export-Package: com.ummat.advanced.search.constants

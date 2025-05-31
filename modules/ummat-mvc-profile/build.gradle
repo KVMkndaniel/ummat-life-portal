@@ -1,0 +1,8 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.1.0"
+	api project(":modules:ummat_startup_details:ummat_startup_details-api")
+	api project(":modules:ummat-startup-slayer:ummat-startup-slayer-api")
+	
+}

@@ -1,0 +1,6 @@
+Bundle-Name: ummat_startup_details-service
+Bundle-SymbolicName: ummat_startup_details.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit

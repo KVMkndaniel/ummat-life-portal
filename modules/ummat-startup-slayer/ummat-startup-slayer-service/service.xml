@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" auto-namespace-tables="false"  package-path="com.ummat.slayer">
+	<namespace>UMMAT</namespace>
+	<entity local-service="true" name="District" remote-service="true" uuid="true">
+		<column name="districtId" primary="true" type="long" id-type="increment"/>
+		<column name="regionId" type="long" />
+		<column name="name" type="String" />
+		<column name="active" type="boolean" />
+		<column type="String" name="regionCode"></column>
+		
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<finder return-type="Collection" name="RegionId">
+		<finder-column name="regionId"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="RegionCode">
+		<finder-column name="regionCode"></finder-column>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="Locality" remote-service="true" uuid="true">
+		<column name="localityId" primary="true" type="long" id-type="increment"/>
+		<column name="regionId" type="long" />
+		<column name="districtId" type="long" />
+		<column name="name" type="String" />
+		<column name="active" type="boolean" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<finder return-type="Collection" name="DistrictId">
+		<finder-column name="districtId"></finder-column>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MatriImages" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="id" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="dlEntryId" type="long" />
+		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+		
+		<finder return-type="Collection" name="userId">
+			<finder-column name="userId"></finder-column>
+		</finder>
+
+	</entity>
+	
+</service-builder>

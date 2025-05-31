@@ -1,0 +1,4 @@
+Bundle-Name: ummat-content-mgmt
+Bundle-SymbolicName: com.ummat.content.mgmt
+Bundle-Version: 1.0.0
+Export-Package: com.ummat.content.mgmt.constants

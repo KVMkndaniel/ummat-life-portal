@@ -1,0 +1,10 @@
+Bundle-Name: ummat_startup_details-api
+Bundle-SymbolicName: ummat_startup_details.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	ummat_startup_details.exception,\
+	ummat_startup_details.model,\
+	ummat_startup_details.service,\
+	ummat_startup_details.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../ummat_startup_details-service/service.xml

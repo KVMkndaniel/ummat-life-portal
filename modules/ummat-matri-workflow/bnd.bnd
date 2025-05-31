@@ -1,0 +1,4 @@
+Bundle-Name: ummat-matri-workflow
+Bundle-SymbolicName: com.mvc.ummat.matri
+Bundle-Version: 1.0.0
+Export-Package: com.mvc.ummat.matri.constants

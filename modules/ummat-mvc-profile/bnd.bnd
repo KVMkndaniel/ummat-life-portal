@@ -1,0 +1,4 @@
+Bundle-Name: ummat-mvc-profile
+Bundle-SymbolicName: ummat.profile.portlet
+Bundle-Version: 1.0.0
+Export-Package: ummat.profile.portlet.constants
