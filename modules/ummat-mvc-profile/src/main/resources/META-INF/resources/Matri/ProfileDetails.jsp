@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-md-right">
-                    <button class="btn btn-primary btn-lg"><i class="fas fa-heart"></i> Express Interest</button>
+                    <!-- <button class="btn btn-primary btn-lg"><i class="fas fa-heart"></i> Express Interest</button> -->
                     <button class="btn btn-outline-warning btn-lg"><i class="fas fa-comment"></i> Message</button>
                 </div>
             </div>
