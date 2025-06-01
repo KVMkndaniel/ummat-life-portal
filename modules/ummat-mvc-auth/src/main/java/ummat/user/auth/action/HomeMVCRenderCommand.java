@@ -16,6 +16,6 @@ public class HomeMVCRenderCommand implements MVCRenderCommand {
 	@Override
 	public String render(RenderRequest renderRequest, RenderResponse renderResponse) throws PortletException {
 
-		return "/home.jsp";
+		return "/c/portal/login";
 	}
 }
