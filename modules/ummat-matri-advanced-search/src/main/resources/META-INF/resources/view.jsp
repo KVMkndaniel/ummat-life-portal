@@ -276,7 +276,7 @@
                 	
         %>
               <li class="feature">
-                <div class="ribbon_3 popular"><span>Featured</span></div>
+                <div class="ribbon_3 popular"><span>Verified</span></div>
                 <div class="row">
                   <div class="col-lg-2 col-md-3">
                     <div class="listingImg"><img src="<%= userItems.getPortraitURL(themeDisplay) %>" alt=""></div>
@@ -315,13 +315,13 @@
                     <p><%=matrimonyUser.getBio()%></p>
                   </div>
                   <div class="col-lg-2 col-md-3">
-                    <div class="listbtn"> <a href="javascript:void(0)" id="" data-id="19" class="btn save_job"><i class="far fa-star" aria-hidden="true"></i> Save</a> 
+                    <div class="listbtn"> <a href="javascript:void(0)" id="" data-id="19" class="btn save_job"><i class="far fa-heart" aria-hidden="true"></i>Interest</a> 
                     <% 
                      
                         informationRenderURL.setParameter("userId",String.valueOf(userItems.getUserId())); 
                     		
                     %>
-                    <a href="<%= informationRenderURL %>" class="btn apply"><i class="fas fa-paper-plane" aria-hidden="true"></i> Details</a>
+                    <a href="<%= informationRenderURL %>" class="btn apply"><i class="fas fa-eye" aria-hidden="true"></i> Details</a>
                      </div>
                   </div>
                 </div>

@@ -268,6 +268,12 @@ public class CreateMatrimonyUser implements MVCActionCommand {
 			e1.printStackTrace();
 		}
 		try {
+			_log.info("UserRegistration Created Successfully ::::::::::::::::");
+			SessionMessages.add(actionRequest, "user-registered-successfully");			
+			if (Validator.isNull(redirectURL)) {
+				_log.error(" Using default redirect.");
+				redirectURL = "/c/portal/login ";
+			}			
 			actionResponse.sendRedirect(redirectURL);
 		} catch (IOException e) {
 			_log.error("Error redirecting after account creation", e);

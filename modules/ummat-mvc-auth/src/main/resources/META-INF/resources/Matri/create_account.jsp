@@ -29,7 +29,7 @@
 
 <portlet:actionURL name="/login/create_account" var="createAccountURL"
 	windowState="<%=LiferayWindowState.MAXIMIZED.toString()%>">
-	<portlet:param name="mvcRenderCommandName" value="/home" />
+	<portlet:param name="mvcRenderCommandName" value="/c/portal/login" />
 </portlet:actionURL>
 <%-- <portlet:actionURL name="/login/create_account" var="createAccountURL">
     <portlet:param name="mvcRenderCommandName" value="/login/create_account" />
@@ -55,7 +55,7 @@
  --%>
 			<aui:input name="redirect" type="hidden" value="<%=redirect%>" />
 			<!-- Add hidden input field for redirecting to the login page -->
-			<input type="hidden" name="redirectURL" value="/home" />
+			<input type="hidden" name="redirectURL" value="/c/portal/login" />
 
 			<div class="row justify-content-center round">
 				<div class="col-lg-10 col-md-12 ">
